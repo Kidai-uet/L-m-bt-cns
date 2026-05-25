@@ -2,40 +2,38 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Pixel Name Embed</title>
+    <title>Pixel Name Light Mode</title>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <style>
         body {
-            /* Nền trong suốt để hòa vào màu trắng của Notion hiện tại */
-            background-color: transparent; 
+            background-color: #ffffff; /* NỀN TRẮNG hoàn toàn theo yêu cầu */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 150px; 
+            min-height: 160px; 
             margin: 0;
             text-align: center;
             overflow: hidden;
-            font-family: 'VT323', monospace; /* Gọi font Pixel tiếng Việt */
+            font-family: 'VT323', monospace;
         }
         
         .wrapper {
             animation: float 4s ease-in-out infinite; 
-            padding: 20px;
+            padding: 10px;
         }
 
         .title {
-            font-size: 26px; /* Chữ to vừa phải */
-            color: #6b7280; /* Xám thanh lịch cho nền sáng */
+            font-size: 32px; /* Làm chữ TRANG GIỚI THIỆU to lên */
+            color: #6b7280; /* Màu xám đậm để thanh lịch và dễ nhìn trên nền trắng */
             margin-bottom: 5px;
             letter-spacing: 2px;
         }
 
         .name {
-            font-size: 64px; /* Tên cực to và rõ ràng */
-            color: #ea580c; /* Màu cam đậm sắc nét */
-            /* Bóng đổ màu cam nhạt thay vì màu đen để chữ không bị bẩn */
-            text-shadow: 3px 3px 0px #fed7aa; 
+            font-size: 80px; /* Làm chữ NGUYỄN CÔNG ĐẠI to hẳn lên */
+            color: #ea580c; /* Màu cam đậm, sắc nét và nổi bật trên nền trắng */
+            text-shadow: none; /* XÓA HOÀN TOÀN BÓNG PHÍA DƯỚI */
             line-height: 1.1;
         }
 
@@ -51,7 +49,7 @@
 
         @keyframes float {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
+            50% { transform: translateY(-6px); }
             100% { transform: translateY(0px); }
         }
     </style>
