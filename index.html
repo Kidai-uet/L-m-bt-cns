@@ -2,17 +2,16 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Pixel Name Fix Spacing</title>
+    <title>Pixel Name Fix Overlap</title>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <style>
         body {
-            /* Nền trong suốt để khớp với mọi màu nền của Notion */
             background-color: transparent; 
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 220px; /* Nới rộng khung nền ra một chút để chứa đủ dấu */
+            min-height: 250px; /* Tăng chiều cao khung nền để chứa khoảng trống */
             margin: 0;
             text-align: center;
             overflow: hidden;
@@ -21,25 +20,24 @@
         
         .wrapper {
             animation: float 4s ease-in-out infinite; 
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px; /* KHE HỞ CỨNG: Ép 2 dòng cách nhau 30px, bạn có thể tăng lên 40px hoặc 50px nếu muốn xa hơn nữa */
         }
 
         .title {
             font-size: 32px; 
-            color: #888888; /* Màu xám trung tính, đẹp trên cả nền tối/sáng */
-            
-            /* TĂNG KHOẢNG CÁCH DƯỚI ĐỂ TRÁNH ĐỤNG DẤU MŨ CỦA TÊN */
-            margin-bottom: 15px; 
+            color: #888888; 
+            margin: 0; /* Xóa các viền lề rườm rà cũ */
             letter-spacing: 2px;
         }
 
         .name {
             font-size: 80px; 
-            color: #ea580c; /* Cam đậm */
-            text-shadow: none; 
-            
-            /* TĂNG CHIỀU CAO DÒNG ĐỂ DẤU MŨ CÓ CHỖ THỞ */
-            line-height: 1.3; 
+            color: #ea580c; 
+            margin: 0;
+            line-height: 1; /* Thu gọn hộp chữ lại sát nét chữ nhất */
         }
 
         .cursor {
