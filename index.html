@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Pixel Name Embed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /* 1. MÀU NỀN ĐEN: Tàng hình trong Dark Mode của Notion */
+            background-color: white; 
+            
+            /* 2. THU NHỎ NỀN: Loại bỏ fixed height cũ, để nền tự co giãn theo content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* Đặt chiều cao tối thiểu thấp xuống để nền gọn hơn */
+            min-height: 150px; 
+            margin: 0;
+            text-align: center;
+            overflow: hidden; /* Ẩn thanh cuộn */
+        }
+        
+        .wrapper {
+            /* Hiệu ứng trôi lơ lửng giữ nguyên cho ngầu */
+            animation: float 4s ease-in-out infinite; 
+            /* Thêm một chút padding để nội dung không bị sát mép quá */
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 14px;
+            color: #a3a3a3; /* Giữ màu xám mờ cho tiêu đề phụ */
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .name {
+            /* 3. CHỮ TO HƠN: Tăng đáng kể size so với 32px cũ */
+            font-size: 48px; 
+            
+            /* 4. CHỮ MÀU CAM: Đổi màu xanh Neon sang màu cam */
+            color: #ffa500; /* Bạn có thể đổi sang #ff8c00 nếu muốn cam đậm hơn */
+            
+            text-shadow: 4px 4px 0px #000000; /* Tăng bóng đổ cho chữ sắc nét */
+            line-height: 1.3;
+        }
+
+        /* Hiệu ứng con trỏ nhấp nháy giữ nguyên */
+        .cursor {
+            animation: blink 1s step-end infinite;
+            color: #ffffff; /* Giữ con trỏ màu trắng để nổi bật trên nền cam */
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">TRANG GIỚI THIỆU</div>
+        <div class="name">NGUYEN CONG DAI<span class="cursor">_</span></div>
+    </div>
+</body>
+</html>
