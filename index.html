@@ -2,16 +2,17 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Pixel Name Light Mode</title>
+    <title>Pixel Name Fix Spacing</title>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #ffffff; /* NỀN TRẮNG hoàn toàn theo yêu cầu */
+            /* Nền trong suốt để khớp với mọi màu nền của Notion */
+            background-color: transparent; 
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 160px; 
+            min-height: 220px; /* Nới rộng khung nền ra một chút để chứa đủ dấu */
             margin: 0;
             text-align: center;
             overflow: hidden;
@@ -20,21 +21,25 @@
         
         .wrapper {
             animation: float 4s ease-in-out infinite; 
-            padding: 10px;
+            padding: 20px;
         }
 
         .title {
-            font-size: 32px; /* Làm chữ TRANG GIỚI THIỆU to lên */
-            color: #6b7280; /* Màu xám đậm để thanh lịch và dễ nhìn trên nền trắng */
-            margin-bottom: 5px;
+            font-size: 32px; 
+            color: #888888; /* Màu xám trung tính, đẹp trên cả nền tối/sáng */
+            
+            /* TĂNG KHOẢNG CÁCH DƯỚI ĐỂ TRÁNH ĐỤNG DẤU MŨ CỦA TÊN */
+            margin-bottom: 15px; 
             letter-spacing: 2px;
         }
 
         .name {
-            font-size: 70px; /* Làm chữ NGUYỄN CÔNG ĐẠI to hẳn lên */
-            color: #ea580c; /* Màu cam đậm, sắc nét và nổi bật trên nền trắng */
-            text-shadow: none; /* XÓA HOÀN TOÀN BÓNG PHÍA DƯỚI */
-            line-height: 1.1;
+            font-size: 80px; 
+            color: #ea580c; /* Cam đậm */
+            text-shadow: none; 
+            
+            /* TĂNG CHIỀU CAO DÒNG ĐỂ DẤU MŨ CÓ CHỖ THỞ */
+            line-height: 1.3; 
         }
 
         .cursor {
@@ -57,7 +62,6 @@
 <body>
     <div class="wrapper">
         <div class="title">TRANG GIỚI THIỆU</div>
-        <div class="title">""</div>
         <div class="name">NGUYỄN CÔNG ĐẠI<span class="cursor">_</span></div>
     </div>
 </body>
